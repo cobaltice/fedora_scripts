@@ -1,0 +1,12 @@
+#Install akmod-nvidia-470xx once RPMFusion is configured
+
+sudo dnf install akmod-nvidia-470xx -y
+sudo cp /usr/share/X11/xorg.conf.d/nvidia.conf /etc/X11/xorg.conf.d/
+
+# Add the following line to the section
+# Section "OutputClass"
+# Option PrimaryGPU "yes"
+# just before EndSection.  Indent to be aligned with other Option commands.
+# Reboot
+
+
